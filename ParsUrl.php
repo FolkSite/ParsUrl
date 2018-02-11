@@ -18,7 +18,7 @@ class ParsUrl
      * @param string $post
      * @return mixed
      */
-    public function request($url = '', $post = '')
+    static public function request($url = '', $post = '')
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url); // отправляем на
@@ -47,7 +47,7 @@ class ParsUrl
      * @param string $post
      * @return mixed
      */
-    public function read($url = '', $post = '')
+    static public function read($url = '', $post = '')
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -73,7 +73,7 @@ class ParsUrl
         return $data;
     }
 
-    public function read_ajax($url = '', $post = '', $headers = [])
+    static public function read_ajax($url = '', $post = '', $headers = [])
     {
         if (count($headers) == 0) {
             $headers = array(
