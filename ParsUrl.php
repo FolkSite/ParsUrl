@@ -57,8 +57,9 @@ class ParsUrl
         curl_setopt($ch, CURLOPT_REFERER, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // возвратить то что вернул сервер
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);// таймаут4
-        curl_setopt($ch, CURLOPT_TIMEOUT, 10);// время на выполнения скрипта
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, 5000);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);// таймаут4
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);// время на выполнения скрипта
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         //отсылаем серверу COOKIE полученные от него при авторизации
         curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__) . '/cookie.txt');
@@ -98,8 +99,9 @@ class ParsUrl
         // curl_setopt($ch, CURLOPT_HTTP200ALIASES, array(400, 403));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // возвратить то что вернул сервер
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);// таймаут4
-        curl_setopt($ch, CURLOPT_TIMEOUT, 10);// время на выполнения скрипта
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, 5000);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);// таймаут4
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);// время на выполнения скрипта
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         //отсылаем серверу COOKIE полученные от него при авторизации
         curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__) . '/cookie.txt');
