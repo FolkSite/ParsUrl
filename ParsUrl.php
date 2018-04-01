@@ -25,8 +25,10 @@ class ParsUrl
         curl_setopt($ch, CURLOPT_HEADER, 0); // пустые заголовки
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); // возвратить то что вернул сервер
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1); // следовать за редиректами
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);// таймаут4
-        curl_setopt($ch, CURLOPT_TIMEOUT, 10); // время на выполнения скрипта
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT_MS, 5000);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);// таймаут4
+        curl_setopt($ch, CURLOPT_TIMEOUT, 5);// время на выполнения скрипта
+
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_COOKIEJAR, dirname(__FILE__) . '/cookie.txt'); // сохранять куки в файл
         curl_setopt($ch, CURLOPT_COOKIEFILE, dirname(__FILE__) . '/cookie.txt');
