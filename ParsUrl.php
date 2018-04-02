@@ -119,7 +119,7 @@ class ParsUrl
      * @param $key
      * @return string
      */
-    static private function getHash($array, $key)
+    static public function getHash($array, $key)
     {
         $text = json_encode($array);
         $ivlen = openssl_cipher_iv_length($cipher = "AES-128-CBC");
@@ -134,7 +134,7 @@ class ParsUrl
      * @param $key
      * @return string
      */
-    static private function getReHash($ciphertext, $key)
+    static public function getReHash($ciphertext, $key)
     {
         $c = base64_decode($ciphertext);
         $ivlen = openssl_cipher_iv_length($cipher = "AES-128-CBC");
